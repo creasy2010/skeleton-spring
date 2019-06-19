@@ -1,5 +1,8 @@
 package com.example.demo.controller;
 
+import com.example.demo.model.user.User;
+import com.example.demo.model.user.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -9,13 +12,19 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/pet/coupon-info")
 public class PetCouponInfoController {
 
+
+    @Autowired
+    private UserService userService;
     /**
      * 领券中心列表
      * @return
      */
     @GetMapping("/center")
     public void getCouponStarted() {
-        System.out.println("132123");
+        userService.page();
+        User user = new User();
+        user.setName("Jay");
+        userService.save(user);
         return  ;
     }
 }
