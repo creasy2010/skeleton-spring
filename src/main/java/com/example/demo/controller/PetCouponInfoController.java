@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.user.User;
+import com.example.demo.model.user.UserRepository;
 import com.example.demo.model.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,10 @@ public class PetCouponInfoController {
 
     @Autowired
     private UserService userService;
+
+
+    @Autowired
+    private UserRepository userRepository;
     /**
      * 领券中心列表
      * @return
@@ -25,6 +30,7 @@ public class PetCouponInfoController {
         User user = new User();
         user.setName("Jay");
         userService.save(user);
+        userRepository.rename("Jay yang","2222");
         return  ;
     }
 }

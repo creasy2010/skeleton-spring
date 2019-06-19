@@ -13,17 +13,6 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    /**
-     * 新增商品分类
-     *
-     * @param cate 商品分类
-     */
-
-    /**
-     * 分页查询商品分类
-     *
-     * @return page
-     */
     public void page() {
         System.out.println(userRepository.findAll());
     }
