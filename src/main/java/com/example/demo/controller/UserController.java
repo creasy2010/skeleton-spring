@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/pet/coupon-info")
-public class PetCouponInfoController {
+public class UserController {
 
 
     @Autowired
