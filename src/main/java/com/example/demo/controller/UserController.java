@@ -6,9 +6,12 @@ import com.example.demo.model.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 /**
  * Created by CHENLI on 2018/9/25.
  */
+@Api
 @RestController
 @RequestMapping("/pet/coupon-info")
 public class UserController {
